@@ -2,6 +2,7 @@
 Process of creating the tidy data set. 
 
 ## Steps:
+Assumes that required data files are all in the working directory.
 run_analysis.R does the following:
 
 1. Merges the training and the test sets to create one data set.
