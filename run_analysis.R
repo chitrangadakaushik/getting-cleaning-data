@@ -31,7 +31,7 @@ colnames(full_data) <- c("subject", "activity", as.character(features_mean_std))
 
 # Step 5: Create a tidy data set with the average of 
 # each variable for each activity and each subject.
-full_data <- ddply(full_data, .(activity, subject), function(x) colMeans(x[,3:68]))
+full_data <- ddply(full_data, .(subject, activity), function(x) colMeans(x[,3:68]))
 
 # Final: Writing the data
 write.table(full_data, "tidy-dataset.txt", row.names = FALSE)
